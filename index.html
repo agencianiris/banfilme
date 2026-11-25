@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banfilme | Filmes de PVC para indústria</title>
+<meta name="description" content="Banfilme Indústria e Comércio de Plásticos. Fabricante de filmes de PVC esticável, encolhível, skin, paletização e Ficap. Guarulhos/SP, atendimento em todo o Brasil e América do Sul.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#D7261E; --red-d:#A81B15; --ink:#111316; --ink2:#1B1E23; --steel:#2A2F37;
+  --mute:#6B7280; --line:#E4E6EA; --paper:#F5F5F3; --white:#fff;
+  --mono:'JetBrains Mono',ui-monospace,monospace; --sans:'Archivo',system-ui,sans-serif;
+  --r:4px; --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--red)}
+.eyebrow:before{content:"";width:22px;height:2px;background:var(--red)}
+h1,h2,h3{line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(32px,4vw,52px);font-weight:800}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:var(--r);font-weight:700;font-size:15px;cursor:pointer;border:0;transition:.2s;font-family:var(--sans)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-d)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff;background:transparent}.btn-ghost:hover{border-color:#fff}
+.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:var(--steel)}
+.btn svg{width:18px;height:18px}
+
+/* top bar */
+.topbar{background:var(--ink);color:#C9CDD3;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px}
+.topbar .l{display:flex;gap:24px}
+.lang{display:flex;gap:4px}
+.lang button{background:none;border:0;color:#8A9099;font:500 12px var(--mono);padding:4px 7px;cursor:pointer;border-radius:3px}
+.lang button.on{color:#fff;background:var(--steel)}
+
+/* header */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:24px;letter-spacing:-.03em;cursor:pointer}
+.logo .mark{width:34px;height:34px;background:var(--red);border-radius:3px;position:relative;overflow:hidden}
+.logo .mark:before,.logo .mark:after{content:"";position:absolute;left:-4px;right:-4px;height:5px;background:#fff;transform:rotate(-18deg)}
+.logo .mark:before{top:10px}.logo .mark:after{top:20px;opacity:.55}
+.logo small{display:block;font:500 9.5px var(--mono);letter-spacing:.14em;color:var(--mute);margin-top:2px}
+nav.menu{display:flex;gap:6px;align-items:center}
+nav.menu>a,nav.menu .dd>a{padding:10px 14px;font-weight:600;font-size:15px;border-radius:var(--r);cursor:pointer}
+nav.menu>a:hover,nav.menu .dd>a:hover{background:var(--paper)}
+.dd{position:relative}
+.dd-panel{position:absolute;top:100%;left:-120px;width:640px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 24px 60px rgba(17,19,22,.14);padding:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}
+.dd:hover .dd-panel{opacity:1;visibility:visible;transform:none}
+.dd-panel a{padding:12px;border-radius:6px;display:block}
+.dd-panel a:hover{background:var(--paper)}
+.dd-panel b{display:block;font-size:15px}
+.dd-panel span{font-size:12.5px;color:var(--mute)}
+.burger{display:none;background:none;border:0;cursor:pointer}
+
+/* hero */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;min-height:620px;padding-top:60px;padding-bottom:60px}
+.hero h1{font-size:clamp(42px,5.6vw,78px);font-weight:900;margin:22px 0}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.lead{font-size:19px;color:#B9BEC6;max-width:520px;margin-bottom:34px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-visual{position:relative;height:500px}
+.ph{background:repeating-linear-gradient(135deg,#22262c 0 14px,#1d2126 14px 28px);border:1px solid #2f343b;border-radius:6px;position:absolute;display:flex;align-items:flex-end;padding:14px;color:#7E858F}
+.ph .tag{background:rgba(0,0,0,.55);padding:6px 10px;border-radius:3px;font:500 11px var(--mono);letter-spacing:.06em;color:#C5CAD1}
+.ph.a{inset:0 0 120px 60px;align-items:flex-start}
+.ph.b{left:0;bottom:0;width:58%;height:200px;background:repeating-linear-gradient(135deg,#2a1513 0 14px,#24110f 14px 28px);border-color:#4a201c}
+.ph.c{right:0;bottom:0;width:38%;height:200px}
+.hero .roll{position:absolute;right:-60px;top:40px;opacity:.95}
+.grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
+
+/* numbers */
+.stats{background:var(--red);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:34px 24px;border-right:1px solid rgba(255,255,255,.22)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:44px;font-weight:900;letter-spacing:-.03em;line-height:1}
+.stat span{font-size:14px;opacity:.9}
+
+/* sections */
+section.s{padding:110px 0}
+.s-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px}
+.s-head p{max-width:440px;color:var(--mute);font-size:17px}
+.s-head h2{margin-top:14px;max-width:640px}
+
+/* product grid */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.pcard{background:#fff;padding:32px;min-height:330px;display:flex;flex-direction:column;cursor:pointer;position:relative;transition:.25s}
+.pcard:hover{background:var(--ink);color:#fff}
+.pcard:hover .pcard-n,.pcard:hover p{color:#9DA3AC}
+.pcard:hover .arrow{background:var(--red);color:#fff;transform:translateX(4px)}
+.pcard-n{font:500 12px var(--mono);color:var(--mute);letter-spacing:.08em}
+.pcard .ico{height:96px;margin:26px 0 22px}.pcard .ico svg{height:96px;width:auto}
+.pcard h3{font-size:26px;font-weight:800;margin-bottom:8px}
+.pcard p{color:var(--mute);font-size:15px;flex:1}
+.pcard .foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px}
+.pcard .subs{font:500 11.5px var(--mono);color:var(--red);letter-spacing:.06em}
+.arrow{width:40px;height:40px;border-radius:50%;background:var(--paper);display:grid;place-items:center;transition:.25s}
+
+/* factory */
+.factory{background:var(--paper)}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:14px}
+.fgrid .ph{position:relative;inset:auto;background:repeating-linear-gradient(135deg,#e7e8e5 0 14px,#e0e1de 14px 28px);border-color:#d6d8d4;color:var(--mute)}
+.fgrid .ph .tag{background:#fff;color:var(--ink)}
+.fgrid .ph:first-child{grid-row:span 2}
+.cap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:14px;background:var(--ink);color:#fff;border-radius:6px;overflow:hidden}
+.cap div{padding:26px;border-right:1px solid #2b3038}
+.cap div:last-child{border:0}
+.cap b{display:block;font-size:22px;font-weight:800;margin-top:6px}
+.cap .mono{color:#8A9099}
+
+/* sectors */
+.sectors{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.sector{border:1px solid var(--line);border-radius:6px;padding:20px 16px;font-weight:600;font-size:14.5px;display:flex;flex-direction:column;gap:14px;transition:.2s}
+.sector:hover{border-color:var(--red)}
+.sector svg{width:28px;height:28px;color:var(--red)}
+
+/* why */
+.why{background:var(--ink);color:#fff}
+.why .s-head p{color:#9DA3AC}
+.wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#2b3038;border:1px solid #2b3038}
+.witem{background:var(--ink);padding:34px 28px}
+.witem .n{font:500 12px var(--mono);color:var(--red)}
+.witem h3{font-size:21px;margin:18px 0 10px;font-weight:700}
+.witem p{color:#9DA3AC;font-size:15px}
+
+/* catalog */
+.catalog .box{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:48px;background:linear-gradient(90deg,#fff 60%,var(--paper))}
+.catalog h2{font-size:clamp(28px,3vw,40px)}
+.catalog p{color:var(--mute);margin-top:12px;max-width:560px}
+
+/* router / triage */
+.triage{background:var(--paper)}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tri button{text-align:left;background:#fff;border:1px solid var(--line);border-radius:8px;padding:28px;cursor:pointer;font-family:var(--sans);transition:.2s}
+.tri button:hover{border-color:var(--ink);transform:translateY(-3px)}
+.tri b{display:block;font-size:20px;margin:16px 0 6px}
+.tri span{color:var(--mute);font-size:14.5px}
+.tri .k{font:500 11px var(--mono);letter-spacing:.08em;color:var(--red)}
+
+/* footer */
+footer{background:#0B0C0E;color:#9DA3AC;padding:80px 0 30px;font-size:14.5px}
+.fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px}
+footer h4{color:#fff;font-size:14px;margin-bottom:16px}
+footer li{list-style:none;margin-bottom:9px}
+footer a:hover{color:#fff}
+footer .logo{color:#fff}
+.fbottom{border-top:1px solid #1f2328;margin-top:60px;padding-top:24px;display:flex;justify-content:space-between;font-size:13px}
+
+/* product page */
+.phero{background:var(--ink);color:#fff;padding:70px 0 0}
+.crumb{font:500 12px var(--mono);color:#8A9099;letter-spacing:.06em}
+.crumb a:hover{color:#fff}
+.phero-g{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:end;margin-top:26px}
+.phero h1{font-size:clamp(44px,5.5vw,76px);font-weight:900}
+.phero p{color:#B9BEC6;font-size:18px;margin:20px 0 30px;max-width:560px}
+.phero .ph{position:relative;inset:auto;height:340px;border-radius:6px 6px 0 0}
+.tabs{display:flex;gap:2px;margin-top:50px;border-bottom:1px solid #2b3038;overflow-x:auto}
+.tabs button{background:none;border:0;color:#8A9099;font:600 15px var(--sans);padding:16px 22px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+.tabs button.on{color:#fff;border-color:var(--red)}
+.pbody{padding:70px 0 110px}
+.pbody-g{display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:start}
+.pbody h2{font-size:34px;margin-bottom:16px}
+.pbody .desc{font-size:17px;color:#3a3f47;margin-bottom:34px}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:44px}
+.feat div{border:1px solid var(--line);border-radius:6px;padding:20px;display:flex;gap:14px}
+.feat svg{flex:none;width:22px;height:22px;color:var(--red);margin-top:2px}
+.spec{width:100%;border-collapse:collapse;font-size:15px}
+.spec th{text-align:left;font:500 11.5px var(--mono);letter-spacing:.08em;color:var(--mute);padding:12px 16px;background:var(--paper);text-transform:uppercase}
+.spec td{padding:15px 16px;border-bottom:1px solid var(--line)}
+.spec td:first-child{font-weight:600}
+.spec .sob{font:500 12px var(--mono);color:var(--red)}
+.side{position:sticky;top:100px;background:var(--ink);color:#fff;border-radius:8px;padding:30px}
+.side h3{font-size:22px;margin-bottom:8px}
+.side p{color:#9DA3AC;font-size:14.5px;margin-bottom:22px}
+.side .btn{width:100%;justify-content:center;margin-bottom:10px}
+.side ul{margin-top:22px;border-top:1px solid #2b3038;padding-top:18px}
+.side li{list-style:none;font-size:14px;color:#C9CDD3;padding:6px 0;display:flex;gap:10px}
+.side li:before{content:"→";color:var(--red)}
+
+/* pages */
+.pagehead{background:var(--ink);color:#fff;padding:90px 0 80px}
+.pagehead h1{font-size:clamp(44px,5.5vw,72px);font-weight:900;margin-top:18px;max-width:900px}
+.pagehead p{color:#B9BEC6;font-size:19px;margin-top:20px;max-width:640px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.form{display:grid;gap:14px}
+.form label{font-weight:600;font-size:14px;display:grid;gap:6px}
+.form input,.form select,.form textarea{font:15px var(--sans);padding:14px;border:1px solid var(--line);border-radius:var(--r);background:#fff;width:100%}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--ink);border-color:transparent}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ok{display:none;background:#EAF7EE;border:1px solid #B7E2C3;color:#1B6B36;padding:16px;border-radius:6px;font-weight:600}
+.cinfo div{padding:22px 0;border-bottom:1px solid var(--line)}
+.cinfo .mono{color:var(--mute)}
+.cinfo b{display:block;font-size:19px;margin-top:6px}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--ink);margin-top:20px}
+.timeline div{padding:26px 22px 0 0}
+.timeline b{font-size:28px;font-weight:900;color:var(--red)}
+.timeline p{color:var(--mute);font-size:15px;margin-top:8px}
+
+/* wa float */
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;background:#1FAF55;color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.25);cursor:pointer;border:0}
+.wa svg{width:30px;height:30px}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(11,12,14,.6);z-index:80;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.on{display:flex}
+.mbox{background:#fff;border-radius:10px;max-width:520px;width:100%;padding:34px;position:relative}
+.mbox h3{font-size:26px;margin-bottom:6px}
+.mbox p{color:var(--mute);margin-bottom:22px}
+.mbox .x{position:absolute;right:16px;top:14px;background:none;border:0;font-size:26px;cursor:pointer;color:var(--mute)}
+.mopts{display:grid;gap:10px}
+.mopts button{display:flex;justify-content:space-between;align-items:center;text-align:left;padding:18px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer;font:600 16px var(--sans)}
+.mopts button:hover{border-color:var(--red)}
+.mopts small{display:block;font-weight:400;color:var(--mute);font-size:13.5px}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+.view{display:none}.view.on{display:block}
+
+@media(max-width:980px){
+  nav.menu{display:none}.burger{display:block}
+  nav.menu.open{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:76px;left:0;right:0;background:#fff;padding:14px;border-bottom:1px solid var(--line)}
+  nav.menu.open .dd-panel{display:none}
+  .hero .wrap,.phero-g,.pbody-g,.two{grid-template-columns:1fr}
+  .hero-visual{height:340px}
+  .stats .wrap,.cap,.wgrid,.timeline{grid-template-columns:1fr 1fr}
+  .pgrid,.tri{grid-template-columns:1fr}
+  .sectors{grid-template-columns:repeat(3,1fr)}
+  .fgrid{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}
+  .fgrid .ph:first-child{grid-column:span 2;grid-row:auto}
+  .fcols{grid-template-columns:1fr 1fr}
+  .s-head{flex-direction:column;align-items:flex-start}
+  .catalog .box{grid-template-columns:1fr;padding:30px}
+  .side{position:static}
+  .topbar .l span:nth-child(n+2){display:none}
+  .feat,.form .row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div class="l"><span>(11) 5118-1040</span><span>comercial@banfilme.com.br</span><span>Guarulhos / SP</span></div>
+  <div class="lang"><button class="on">PT</button><button>EN</button><button>ES</button></div>
+</div></div>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" data-go="inicio"><span class="mark"></span><span>BANFILME<small>FILMES DE PVC</small></span></a>
+  <nav class="menu" id="menu">
+    <div class="dd"><a data-go="produtos">Produtos ▾</a>
+      <div class="dd-panel" id="ddpanel"></div>
+    </div>
+    <a data-go="fabrica">A Fábrica</a>
+    <a data-go="quem-somos">Quem Somos</a>
+    <a data-go="catalogo">Catálogo</a>
+    <a data-go="contato">Contato</a>
+    <a class="btn btn-red" data-wa="orcamento" style="margin-left:8px">Solicitar orçamento</a>
+  </nav>
+  <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')" aria-label="Menu"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+</div></header>
+
+<!-- ============ HOME ============ -->
+<main class="view" id="v-inicio">
+  <section class="hero">
+    <div class="grid-lines"></div>
+    <div class="wrap" style="position:relative">
+      <div>
+        <span class="mono eyebrow">Fabricante de filmes de PVC · Guarulhos/SP</span>
+        <h1>Filme de PVC que <em>aguenta</em> a linha de produção.</h1>
+        <p class="lead">Esticável, encolhível, skin, paletização e Ficap. Produção própria, especificação sob medida e entrega para todo o Brasil e América do Sul.</p>
+        <div class="ctas">
+          <a class="btn btn-red" data-wa="orcamento">Solicitar orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" data-go="catalogo">Baixar catálogo técnico</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="ph a"><span class="tag">FOTO AÉREA DA FÁBRICA · substituir</span></div>
+        <div class="ph b"><span class="tag">LINHA DE EXTRUSÃO</span></div>
+        <div class="ph c"><span class="tag">BOBINAS / ESTOQUE</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats"><div class="wrap">
+    <div class="stat"><b>+30</b><span>anos fabricando filme de PVC</span></div>
+    <div class="stat"><b>6</b><span>linhas de produto industrial</span></div>
+    <div class="stat"><b>BR + AS</b><span>atendimento nacional e exportação</span></div>
+    <div class="stat"><b>-20°C</b><span>resistência na linha frigorífico</span></div>
+  </div></div>
+
+  <section class="s" id="produtos">
+    <div class="wrap">
+      <div class="s-head reveal">
+        <div><span class="mono eyebrow">Linhas de produto</span><h2>Um filme certo para cada etapa da sua embalagem.</h2></div>
+        <p>Do envolvimento manual à máquina automática, do congelamento ao túnel de encolhimento. Escolha a linha e veja aplicações e medidas.</p>
+      </div>
+      <div class="pgrid" id="pgrid"></div>
+    </div>
+  </section>
+
+  <section class="s factory" id="fabrica">
+    <div class="wrap">
+      <div class="s-head reveal">
+        <div><span class="mono eyebrow">A fábrica</span><h2>Produção própria em Guarulhos, do grão à bobina.</h2></div>
+        <p>Comprador industrial precisa saber quem fabrica. Aqui entram fotos reais da planta, da extrusão, do controle de qualidade e da expedição.</p>
+      </div>
+      <div class="fgrid reveal">
+        <div class="ph"><span class="tag">FOTO AÉREA / FACHADA</span></div>
+        <div class="ph"><span class="tag">EXTRUSÃO</span></div>
+        <div class="ph"><span class="tag">REBOBINAMENTO</span></div>
+        <div class="ph"><span class="tag">CONTROLE DE QUALIDADE</span></div>
+        <div class="ph"><span class="tag">EXPEDIÇÃO</span></div>
+      </div>
+      <div class="cap reveal">
+        <div><span class="mono">Área fabril</span><b>[__] m²</b></div>
+        <div><span class="mono">Capacidade</span><b>[__] t / mês</b></div>
+        <div><span class="mono">Linhas de extrusão</span><b>[__]</b></div>
+        <div><span class="mono">Prazo médio</span><b>[__] dias úteis</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s">
+    <div class="wrap">
+      <div class="s-head reveal">
+        <div><span class="mono eyebrow">Segmentos atendidos</span><h2>Quem embala com Banfilme.</h2></div>
+        <p>Alimentício, frigorífico e uma longa lista de indústrias que precisam proteger produto contra poeira, umidade, atrito e violação.</p>
+      </div>
+      <div class="sectors reveal" id="sectors"></div>
+    </div>
+  </section>
+
+  <section class="s why">
+    <div class="wrap">
+      <div class="s-head reveal">
+        <div><span class="mono eyebrow">Por que Banfilme</span><h2>Feito para quem compra por especificação.</h2></div>
+        <p>Menos troca de bobina, menos refugo e menos parada de máquina. É isso que um bom filme entrega no chão de fábrica.</p>
+      </div>
+      <div class="wgrid reveal">
+        <div class="witem"><span class="n">01</span><h3>Sob medida</h3><p>Largura, espessura e comprimento definidos pela sua operação, incluindo fracionamento.</p></div>
+        <div class="witem"><span class="n">02</span><h3>Alta transparência</h3><p>Brilho e transparência que valorizam o produto no ponto de venda.</p></div>
+        <div class="witem"><span class="n">03</span><h3>Desempenho no frio</h3><p>Tratamento antiembaçante e aderência mantida após congelamento.</p></div>
+        <div class="witem"><span class="n">04</span><h3>Atendimento técnico</h3><p>Equipe comercial que entende de máquina, túnel e aplicação, não só de preço.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s catalog" id="catalogo">
+    <div class="wrap">
+      <div class="box reveal">
+        <div>
+          <span class="mono eyebrow">Catálogo técnico 2025</span>
+          <h2 style="margin-top:14px">Todas as linhas, aplicações e medidas em um PDF.</h2>
+          <p>Leve para a reunião de compras ou para a engenharia de embalagem.</p>
+        </div>
+        <a class="btn btn-dark" href="https://demos.onlineservice.com.br/wp-content/uploads/2026/09/BANFILME-CATALOGO-2025_2025.pdf" target="_blank" rel="noopener">Baixar catálogo (PDF) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12M6 10l6 6 6-6M4 20h16"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="s triage">
+    <div class="wrap">
+      <div class="s-head reveal">
+        <div><span class="mono eyebrow">Fale com a gente</span><h2>Como podemos ajudar?</h2></div>
+        <p>Escolha o assunto e você cai direto na pessoa certa.</p>
+      </div>
+      <div class="tri reveal">
+        <button data-wa="orcamento"><span class="k">Comercial</span><b>Quero comprar</b><span>Orçamento, amostras e especificação técnica.</span></button>
+        <button data-go="contato" data-topic="Representante comercial"><span class="k">Parcerias</span><b>Quero ser representante</b><span>Represente a Banfilme na sua região.</span></button>
+        <button data-go="contato" data-topic="Fornecedor"><span class="k">Outros assuntos</span><b>Fornecedor ou currículo</b><span>Propostas de fornecimento e vagas.</span></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ PRODUTO (template) ============ -->
+<main class="view" id="v-produto">
+  <section class="phero"><div class="wrap">
+    <div class="crumb"><a data-go="inicio">INÍCIO</a> / <a data-go="produtos">PRODUTOS</a> / <span id="p-crumb"></span></div>
+    <div class="phero-g">
+      <div>
+        <span class="mono eyebrow" id="p-eyebrow"></span>
+        <h1 id="p-title"></h1>
+        <p id="p-lead"></p>
+        <a class="btn btn-red" data-wa="produto">Orçamento desta linha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="ph" id="p-photo"><span class="tag">FOTO DO PRODUTO EM USO · substituir</span></div>
+    </div>
+    <div class="tabs" id="p-tabs"></div>
+  </div></section>
+  <section class="pbody"><div class="wrap pbody-g">
+    <div>
+      <h2 id="s-title"></h2>
+      <p class="desc" id="s-desc"></p>
+      <div class="feat" id="s-feat"></div>
+      <h3 style="font-size:20px;margin-bottom:14px">Especificações</h3>
+      <table class="spec"><thead><tr><th>Parâmetro</th><th>Valor</th></tr></thead><tbody id="s-spec"></tbody></table>
+    </div>
+    <aside class="side">
+      <h3>Precisa de uma medida específica?</h3>
+      <p>Mande a aplicação e o equipamento. Nossa equipe técnica indica o filme e envia proposta.</p>
+      <a class="btn btn-red" data-wa="produto">Falar no WhatsApp</a>
+      <a class="btn btn-ghost" href="https://demos.onlineservice.com.br/wp-content/uploads/2026/09/BANFILME-CATALOGO-2025_2025.pdf" target="_blank" rel="noopener">Ver catálogo</a>
+      <ul><li>Amostra para teste em linha</li><li>Fracionamento sob demanda</li><li>Entrega Brasil e América do Sul</li></ul>
+    </aside>
+  </div></section>
+</main>
+
+<!-- ============ QUEM SOMOS ============ -->
+<main class="view" id="v-quem-somos">
+  <section class="pagehead"><div class="wrap">
+    <span class="mono eyebrow">Quem somos</span>
+    <h1>Mais de três décadas transformando PVC em proteção para a indústria.</h1>
+    <p>A Banfilme é referência nacional em filmes de PVC para uso industrial, doméstico e termoencolhível, com fábrica em Guarulhos/SP.</p>
+  </div></section>
+  <section class="s"><div class="wrap two">
+    <div>
+      <span class="mono eyebrow">Nossa história</span>
+      <h2 style="margin:14px 0 20px;font-size:38px">Qualidade de produção e boas práticas de fabricação.</h2>
+      <p style="color:#3a3f47;font-size:17px">[Texto institucional a validar com o cliente: fundação, marcos, certificações, compromisso com qualidade e atendimento.]</p>
+      <div class="timeline">
+        <div><b>[ano]</b><p>Fundação em Guarulhos</p></div>
+        <div><b>[ano]</b><p>Início da linha encolhível</p></div>
+        <div><b>[ano]</b><p>Exportação para a América do Sul</p></div>
+        <div><b>Hoje</b><p>6 linhas industriais</p></div>
+      </div>
+    </div>
+    <div style="display:grid;gap:14px">
+      <div class="ph" style="position:relative;inset:auto;height:320px;background:repeating-linear-gradient(135deg,#e7e8e5 0 14px,#e0e1de 14px 28px);border-color:#d6d8d4"><span class="tag" style="background:#fff;color:#111">EQUIPE / FÁBRICA</span></div>
+      <div class="cap" style="grid-template-columns:1fr 1fr;margin:0">
+        <div><span class="mono">Missão</span><b style="font-size:17px">Proteger o produto do cliente com o filme certo.</b></div>
+        <div><span class="mono">Alcance</span><b style="font-size:17px">Todo o Brasil e América do Sul.</b></div>
+      </div>
+    </div>
+  </div></section>
+</main>
+
+<!-- ============ CONTATO ============ -->
+<main class="view" id="v-contato">
+  <section class="pagehead"><div class="wrap">
+    <span class="mono eyebrow">Contato</span>
+    <h1>Fale com a Banfilme.</h1>
+    <p>Para orçamento, o caminho mais rápido é o WhatsApp comercial. Para outros assuntos, use o formulário.</p>
+  </div></section>
+  <section class="s"><div class="wrap two">
+    <form class="form" id="cform">
+      <label>Assunto
+        <select id="topic"><option>Orçamento</option><option>Representante comercial</option><option>Fornecedor</option><option>Trabalhe conosco</option><option>Outros</option></select>
+      </label>
+      <div class="row"><label>Nome<input required></label><label>Empresa<input></label></div>
+      <div class="row"><label>E-mail<input type="email" required></label><label>Telefone / WhatsApp<input></label></div>
+      <div class="row"><label>CNPJ<input></label><label>Cidade / UF<input></label></div>
+      <label>Mensagem<textarea rows="5"></textarea></label>
+      <button class="btn btn-red" type="submit" style="justify-content:center">Enviar mensagem</button>
+      <div class="ok" id="okmsg">Mensagem registrada. No site final este formulário envia para o CRM com a origem (UTM) do lead.</div>
+    </form>
+    <div class="cinfo">
+      <div><span class="mono">WhatsApp comercial</span><b>(11) 94470-7869</b></div>
+      <div><span class="mono">Telefone</span><b>(11) 5118-1040</b></div>
+      <div><span class="mono">E-mail</span><b>comercial@banfilme.com.br</b></div>
+      <div><span class="mono">Fábrica</span><b>Rua Mariano, 158 · Bonsucesso · Guarulhos/SP</b></div>
+      <a class="btn btn-dark" data-wa="orcamento" style="margin-top:26px">Abrir WhatsApp comercial</a>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fcols">
+    <div><a class="logo" data-go="inicio"><span class="mark"></span><span>BANFILME<small>FILMES DE PVC</small></span></a><p style="margin-top:18px;max-width:300px">Banfilme Indústria e Comércio de Plásticos Ltda. Filmes de PVC para indústria desde [ano].</p></div>
+    <div><h4>Produtos</h4><ul id="fprod"></ul></div>
+    <div><h4>Empresa</h4><ul><li><a data-go="quem-somos">Quem somos</a></li><li><a data-go="fabrica">A fábrica</a></li><li><a data-go="catalogo">Catálogo</a></li><li><a data-go="contato" data-topic="Representante comercial">Seja representante</a></li><li><a data-go="contato" data-topic="Trabalhe conosco">Trabalhe conosco</a></li></ul></div>
+    <div><h4>Contato</h4><ul><li>(11) 94470-7869 · WhatsApp</li><li>(11) 5118-1040</li><li>comercial@banfilme.com.br</li><li>Rua Mariano, 158 · Guarulhos/SP</li></ul></div>
+  </div>
+  <div class="fbottom"><span>© 2026 Banfilme Indústria e Comércio de Plásticos Ltda.</span><span>Política de privacidade</span></div>
+</div></footer>
+
+<button class="wa" data-wa="float" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0"/></svg></button>
+
+<div class="modal" id="modal"><div class="mbox">
+  <button class="x" onclick="closeM()">×</button>
+  <h3>Como podemos ajudar?</h3>
+  <p>Assim você cai direto na pessoa certa.</p>
+  <div class="mopts">
+    <button onclick="wa('orcamento')"><span>Quero comprar<small>Orçamento e especificação técnica</small></span>→</button>
+    <button onclick="closeM();go('contato','Fornecedor')"><span>Sou fornecedor<small>Propostas de fornecimento</small></span>→</button>
+    <button onclick="closeM();go('contato','Trabalhe conosco')"><span>Enviar currículo<small>Trabalhe conosco</small></span>→</button>
+  </div>
+</div></div>
+
+<script>
+const WA='5511944707869';
+const ICON={
+ roll:'<svg viewBox="0 0 120 96" fill="none"><ellipse cx="30" cy="48" rx="18" ry="38" fill="#D7261E"/><ellipse cx="30" cy="48" rx="7" ry="15" fill="#fff"/><path d="M30 10h62c10 0 18 17 18 38s-8 38-18 38H30" stroke="currentColor" stroke-width="3"/><path d="M92 86c-10 0-18-17-18-38s8-38 18-38" stroke="currentColor" stroke-width="2" stroke-dasharray="4 5"/></svg>',
+ stretch:'<svg viewBox="0 0 120 96" fill="none"><rect x="10" y="22" width="56" height="52" rx="3" stroke="currentColor" stroke-width="3"/><path d="M10 36h56M10 50h56M10 64h56" stroke="#D7261E" stroke-width="3"/><path d="M76 48h34M98 36l12 12-12 12" stroke="currentColor" stroke-width="3"/></svg>',
+ shrink:'<svg viewBox="0 0 120 96" fill="none"><path d="M14 30c0-6 10-12 46-12s46 6 46 12v36c0 6-10 12-46 12S14 72 14 66z" stroke="currentColor" stroke-width="3"/><path d="M30 18c-4 8-4 52 0 60M90 18c4 8 4 52 0 60" stroke="#D7261E" stroke-width="3"/><path d="M50 4v8M60 2v10M70 4v8" stroke="#D7261E" stroke-width="2.5" stroke-linecap="round"/></svg>',
+ skin:'<svg viewBox="0 0 120 96" fill="none"><rect x="20" y="10" width="80" height="76" rx="3" stroke="currentColor" stroke-width="3"/><path d="M42 34h36v28H42z" fill="#D7261E"/><path d="M36 30c4-4 44-4 48 0v36c-4 4-44 4-48 0z" stroke="currentColor" stroke-width="2" stroke-dasharray="3 4"/></svg>',
+ pallet:'<svg viewBox="0 0 120 96" fill="none"><rect x="26" y="10" width="68" height="60" stroke="currentColor" stroke-width="3"/><path d="M26 25l68 10M26 42l68 10M26 58l68 10" stroke="#D7261E" stroke-width="3"/><path d="M18 74h84v8H18zM26 82v8M60 82v8M94 82v8" stroke="currentColor" stroke-width="3"/></svg>',
+ ficap:'<svg viewBox="0 0 120 96" fill="none"><rect x="8" y="38" width="104" height="20" rx="2" stroke="currentColor" stroke-width="3"/><path d="M8 32h104M8 64h104" stroke="#D7261E" stroke-width="3"/><path d="M24 38v20M44 38v20M64 38v20M84 38v20" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3"/></svg>'
+};
+const P=[
+ {id:'banpack',n:'01',name:'Banpack',icon:'roll',short:'Filme PVC esticável para contato com alimentos, em rolos e refis prontos para uso.',lead:'Linha de filme PVC para contato direto com alimentos: carnes, frios e laticínios. Antiembaçante, com alto poder de alongamento e resistência abaixo de zero.',
+  subs:[
+   {t:'Banpack',d:'Filme amarelo para contato direto com alimentos armazenados em baixas temperaturas.',f:['Tratamento Anti Fog','Alto alongamento','Resistente abaixo de zero','Contato com alimentos'],s:[['Aplicação','Carnes, frios e laticínios'],['Largura','sob consulta'],['Espessura','sob consulta'],['Comprimento','sob consulta']]},
+   {t:'Banpack Refil',d:'Refil para dispensers e cortadores, troca rápida sem desperdício.',f:['Troca rápida','Compatível com dispensers','Contato com alimentos','Menos desperdício'],s:[['Aplicação','Reposição em cortadores'],['Medidas','sob consulta']]},
+   {t:'Banpack Serrilha',d:'Caixa com serrilha para corte limpo no dia a dia da operação.',f:['Corte limpo','Praticidade','Contato com alimentos','Embalagem com serrilha'],s:[['Medidas','280x15 · 280x30 · 280x100 · 280x300 · 380x300'],['Serrilha','com ou sem']]},
+   {t:'Banroll',d:'Praticidade e eficiência para cozinhas industriais e food service.',f:['Pronto para uso','Diversos comprimentos','Contato com alimentos','Food service'],s:[['Medidas','280x15 · 280x30 · 280x100 · 280x300 · 380x300'],['Serrilha','com ou sem']]}
+  ]},
+ {id:'esticavel',n:'02',name:'PVC Esticável',icon:'stretch',short:'Para máquina automática, uso manual industrial, fracionamento e frigoríficos.',lead:'Filme esticável com alta transparência e aderência. Versões para máquina automática, uso industrial manual, fracionamento e congelamento até -20°C.',
+  subs:[
+   {t:'Industrial',d:'Filme para envolvimento manual de artigos em geral na indústria.',f:['Alta aderência','Bom alongamento','Artigos em geral','Diversas medidas'],s:[['Aplicação','Artigos em geral'],['Medidas de referência','120x60 · 120x120'],['Espessura','sob consulta']]},
+   {t:'Máquina Automática',d:'Desenvolvido para máquinas automáticas, com foco em agilidade e continuidade da produção.',f:['Agilidade na produção','Alta transparência','Menos paradas de máquina','Valoriza o produto no PDV'],s:[['Aplicação','Embaladoras automáticas'],['Largura','sob consulta'],['Espessura','sob consulta'],['Tubete','sob consulta']]},
+   {t:'Fracionamento',d:'Fracionamos o filme conforme a necessidade da sua operação ou da sua revenda.',f:['Medida sob demanda','Flexibilidade','Apoio a novos mercados','Ideal para revendas'],s:[['Aplicação','Revenda e uso interno'],['Medidas','conforme projeto']]},
+   {t:'Frigorífico',d:'Filme para congelamento que mantém a embalagem íntegra e aderida após o frio.',f:['Resistente até -20°C','Sem furos ou quebras','Aderência após congelar','Uso em frigoríficos'],s:[['Temperatura mínima','-20°C'],['Aplicação','Congelamento de carnes e alimentos'],['Medidas','sob consulta']]}
+  ]},
+ {id:'encolhivel',n:'03',name:'PVC Encolhível',icon:'shrink',short:'Termoencolhível para túnel: tubular, folha e enfestado, liso ou microperfurado.',lead:'Embalagem que se molda ao produto pela ação do calor em túneis de encolhimento. Alto brilho, transparência e resistência mecânica para transporte.',
+  subs:[
+   {t:'Enfestado',d:'Filme dobrado ao meio, ideal para seladoras em L e túneis de encolhimento.',f:['Alto brilho','Proteção contra violação','Liso ou microperfurado','Alimentício e não alimentício'],s:[['Formato','Enfestado'],['Acabamento','liso ou microperfurado'],['Medidas','sob consulta']]},
+   {t:'Folha',d:'Folha simples para aplicações em máquinas de embalagem contínua.',f:['Alta transparência','Resistência mecânica','Proteção contra poeira e umidade','Liso ou microperfurado'],s:[['Formato','Folha simples'],['Acabamento','liso ou microperfurado'],['Medidas','sob consulta']]},
+   {t:'Tubular',d:'Formato tubo para envolver produtos com agilidade e acabamento uniforme.',f:['Acabamento uniforme','Agilidade','Proteção no transporte','Liso ou microperfurado'],s:[['Formato','Tubular'],['Acabamento','liso ou microperfurado'],['Medidas','sob consulta']]}
+  ]},
+ {id:'skin',n:'04',name:'PVC Skin',icon:'skin',short:'Encartelamento a vácuo para produtos de pequenas dimensões.',lead:'Filme para embalagem skin por encartelamento a vácuo. O filme se ajusta ao produto e o fixa na cartela, com ótima exposição.',
+  subs:[{t:'PVC Skin',d:'Para produtos de pequenas dimensões. A cartela deve ser microperfurada e envernizada para garantir a aderência do filme.',f:['Vácuo sobre cartela','Ótima exposição','Produtos pequenos','Alta aderência'],s:[['Processo','Encartelamento a vácuo'],['Requisito da cartela','microperfurada e envernizada'],['Medidas','sob consulta']]}]},
+ {id:'paletizacao',n:'05',name:'PVC Paletização',icon:'pallet',short:'Unitização e proteção de cargas paletizadas no transporte.',lead:'Filme para unitizar cargas paletizadas, protegendo contra poeira, umidade e movimentação no transporte e armazenagem.',
+  subs:[{t:'PVC Paletização',d:'[Descrição a validar com o cliente: aplicações, tipos de carga e medidas disponíveis.]',f:['Unitização de carga','Proteção no transporte','Contra poeira e umidade','Uso manual ou máquina'],s:[['Aplicação','Cargas paletizadas'],['Medidas','sob consulta']]}]},
+ {id:'ficap',n:'06',name:'PVC Ficap',icon:'ficap',short:'Proteção de superfície para móveis, esquadrias, cabos, vidros e mais.',lead:'Filme de proteção para superfícies e perfis. Atende moveleiro, esquadrias de alumínio, fios e cabos, madeira, vidros, borracha e muito mais.',
+  subs:[{t:'PVC Ficap',d:'Proteção contra riscos, poeira e atrito durante produção, transporte e instalação.',f:['Proteção de superfície','Contra riscos e atrito','Diversos segmentos','Medidas sob consulta'],s:[['Segmentos','Moveleiro, esquadrias, fios e cabos, madeira, vidros, borracha, material escolar, EPS, quadros, molduras, materiais elétricos'],['Medidas','sob consulta']]}]}
+];
+const SECT=['Frigoríficos','Laticínios','Food service','Moveleiro','Esquadrias de alumínio','Fios e cabos','Madeira','Vidros','Borracha','Material escolar','EPS (isopor)','Materiais elétricos'];
+const CHK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>';
+const BOX='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7l9-4 9 4v10l-9 4-9-4z M3 7l9 4 9-4 M12 11v10"/></svg>';
+
+// render home
+pgrid.innerHTML=P.map(p=>`<div class="pcard reveal" data-go="${p.id}"><span class="pcard-n">${p.n} / 06</span><div class="ico">${ICON[p.icon]}</div><h3>${p.name}</h3><p>${p.short}</p><div class="foot"><span class="subs">${p.subs.length>1?p.subs.length+' versões':'linha única'}</span><span class="arrow">→</span></div></div>`).join('');
+ddpanel.innerHTML=P.map(p=>`<a data-go="${p.id}"><b>${p.name}</b><span>${p.subs.length>1?p.subs.map(s=>s.t).join(' · '):p.short.split('.')[0]}</span></a>`).join('');
+fprod.innerHTML=P.map(p=>`<li><a data-go="${p.id}">${p.name}</a></li>`).join('');
+sectors.innerHTML=SECT.map(s=>`<div class="sector">${BOX}${s}</div>`).join('');
+
+// UTM capture: keeps origin so the WhatsApp message carries campaign data
+const qs=new URLSearchParams(location.search);let utm={};
+['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'].forEach(k=>{if(qs.get(k))utm[k]=qs.get(k)});
+try{if(Object.keys(utm).length)sessionStorage.setItem('bf_utm',JSON.stringify(utm));else utm=JSON.parse(sessionStorage.getItem('bf_utm')||'{}')}catch(e){}
+
+let cur={p:null,s:0};
+function wa(kind){
+  let msg='Olá! Vim pelo site da Banfilme e gostaria de um orçamento.';
+  if(kind==='produto'&&cur.p){msg=`Olá! Vim pelo site da Banfilme e quero orçamento de ${cur.p.name}${cur.p.subs.length>1?' ('+cur.p.subs[cur.s].t+')':''}.`}
+  const ref=Object.entries(utm).map(([k,v])=>k.replace('utm_','')+':'+v).join(' | ');
+  if(ref)msg+=`\n\n[ref ${ref}]`;
+  const url=`https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(msg)}`;
+  window.open(url,'_blank')||(location.href=url);
+  closeM();
+}
+function closeM(){modal.classList.remove('on')}
+function go(id,topic){
+  document.getElementById('menu').classList.remove('open');
+  const homeAnchors=['produtos','fabrica','catalogo'];
+  const prod=P.find(p=>p.id===id);
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));
+  if(prod){renderP(prod);document.getElementById('v-produto').classList.add('on');scrollTo(0,0)}
+  else if(document.getElementById('v-'+id)){document.getElementById('v-'+id).classList.add('on');scrollTo(0,0);if(topic)document.getElementById('topic').value=topic}
+  else{document.getElementById('v-inicio').classList.add('on');if(homeAnchors.includes(id))setTimeout(()=>document.getElementById(id).scrollIntoView(),30);else scrollTo(0,0)}
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+  observe();
+}
+function renderP(p){
+  cur={p,s:0};
+  ['p-crumb','p-title'].forEach(i=>document.getElementById(i).textContent=i==='p-crumb'?p.name.toUpperCase():p.name);
+  document.getElementById('p-eyebrow').textContent='Linha '+p.n;
+  document.getElementById('p-lead').textContent=p.lead;
+  const tabs=document.getElementById('p-tabs');
+  tabs.style.display=p.subs.length>1?'flex':'none';
+  tabs.innerHTML=p.subs.map((s,i)=>`<button class="${i?'':'on'}" onclick="sub(${i})">${s.t}</button>`).join('');
+  sub(0);
+}
+function sub(i){
+  cur.s=i;const s=cur.p.subs[i];
+  document.querySelectorAll('#p-tabs button').forEach((b,j)=>b.classList.toggle('on',i===j));
+  document.getElementById('s-title').textContent=s.t;
+  document.getElementById('s-desc').textContent=s.d;
+  document.getElementById('s-feat').innerHTML=s.f.map(x=>`<div>${CHK}<b style="font-weight:600">${x}</b></div>`).join('');
+  document.getElementById('s-spec').innerHTML=s.s.map(r=>`<tr><td>${r[0]}</td><td>${r[1]==='sob consulta'?'<span class="sob">SOB CONSULTA</span>':r[1]}</td></tr>`).join('');
+}
+document.addEventListener('click',e=>{
+  const g=e.target.closest('[data-go]');if(g){e.preventDefault();go(g.dataset.go,g.dataset.topic);return}
+  const w=e.target.closest('[data-wa]');if(w){e.preventDefault();const k=w.dataset.wa;
+    if(k==='float'&&!document.getElementById('v-produto').classList.contains('on')){modal.classList.add('on');return}
+    wa(k==='float'?'produto':k)}
+});
+modal.addEventListener('click',e=>{if(e.target===modal)closeM()});
+document.getElementById('cform').addEventListener('submit',e=>{e.preventDefault();okmsg.style.display='block'});
+let io;function observe(){io&&io.disconnect();io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el))}
+go((location.hash||'#inicio').slice(1));
+window.addEventListener('hashchange',()=>go(location.hash.slice(1)||'inicio'));
+</script>
+</body>
+</html>
